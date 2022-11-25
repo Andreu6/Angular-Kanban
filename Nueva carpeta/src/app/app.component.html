@@ -1,0 +1,8 @@
+<div class="grid-container" *ngFor="let lista of listas">
+  <h3 class="lista">
+    {{ lista }}
+  </h3>
+  <div *ngFor="let tarea of tareas; index as i">
+    <app-tarea *ngIf="tarea.lista == lista" [tareas]="tareas[i]"></app-tarea>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+.todo {
+  background-color: rgb(255, 231, 200);
+  border-radius: 20px;
+}
+
+.img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 55px;
+  width: 550px;
+}
+
+.fecha_img {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.img_usuario {
+  height: 50px;
+  width: 50px;
+  border-radius: 100px;
+}
+
+.centrar {
+  padding: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
