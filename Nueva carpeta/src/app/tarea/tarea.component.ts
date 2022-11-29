@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Tarea } from '../models/tarea-model';
-import * as moment from 'moment';
 
 @Component({
   selector: 'app-tarea',
@@ -8,9 +7,6 @@ import * as moment from 'moment';
   styleUrls: ['./tarea.component.css']
 })
 export class TareaComponent implements OnInit {
-
-  nom1 = moment("2022-11-09").format('YYYY-MM-DD');
-
 
   @Input() tareas: Tarea;
 
@@ -22,6 +18,21 @@ export class TareaComponent implements OnInit {
 
 fecha(tareas:any){
 
+}
+
+fechaColores(fechaFin: Date){
+
+  let fechaActual = new Date;
+  let fecha = new Date(fechaFin) 
+  let fechaNaranja = new Date(fechaActual.setDate(fechaActual.getDate() + 1))
+
+    if(fechaNaranja.getUTCDate() == fecha.getUTCDate() && fechaNaranja.getUTCFullYear() == fecha.getUTCFullYear() && fecha.getUTCMonth() == fechaNaranja.getUTCMonth() && this.tarea.lista !=  "Finalizadas"){return "naranja"
+   
+    } else if(fechaActual > fecha && this.tareas.lista !=  "Finalizadas"){return "rojo"
+    
+    } else if (fechaActual > fecha && this.tareas.lista ==  "Finalizadas"){ return "verde"
+    
+    } else { return "gris" }
 }
 
 }
