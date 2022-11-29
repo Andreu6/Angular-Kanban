@@ -32,11 +32,11 @@ export class TareaComponent implements OnInit {
       fecha.getUTCMonth() == fechaNaranja.getUTCMonth() && this.tareas.lista != "Finalizadas") {
       return "naranja"
 
-    } else if (fechaActual > fecha && this.tareas.lista != "Finalizadas") {
-      return "rojo"
-
     } else if (fechaActual > fecha && this.tareas.lista == "Finalizadas") {
       return "verde"
+
+    } else if (fechaActual > fecha && this.tareas.lista != "Finalizadas") {
+      return "rojo"
 
     } else {
       return "gris"
