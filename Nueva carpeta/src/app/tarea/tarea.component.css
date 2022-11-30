@@ -2,13 +2,14 @@
   background-color:  #FFFAD7;
   border-radius: 20px;
   font-family: cursive;
+  font-size: 20px;
 }
 
 .img {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   height: 55px;
-  width: 550px;
+  width: 400px;
 }
 
 .fecha_img {
@@ -35,7 +36,7 @@
 }
 
 .orange {
-  background-color: orange;
+  background-color: #FEBE8C;
   border-radius: 100px;
   padding: 6px;
 }
@@ -53,7 +54,7 @@
 }
 
 .grey {
-  background-color: grey;
+  background-color: #B2B2B2;
   border-radius: 100px;
   padding: 6px;
 }
