@@ -24,18 +24,18 @@ export class TareaComponent implements OnInit {
 
   fechas(fechaFin: Date) {
 
-    let fechaActual = new Date;
+    let fechaA = new Date;
     let fecha = new Date(fechaFin)
-    let fechaNaranja = new Date(fechaActual.setDate(fechaActual.getDate() + 1))
+    let fechaO = new Date(fechaA.setDate(fechaA.getDate() + 1))
 
-    if (fechaNaranja.getUTCDate() == fecha.getUTCDate() && fechaNaranja.getUTCFullYear() == fecha.getUTCFullYear() &&
-      fecha.getUTCMonth() == fechaNaranja.getUTCMonth() && this.tareas.lista != "Finalizadas") {
+    if (fechaO.getUTCDate() == fecha.getUTCDate() && fechaO.getUTCFullYear() == fecha.getUTCFullYear() &&
+      fecha.getUTCMonth() == fechaO.getUTCMonth() && this.tareas.lista != "Finalizadas") {
       return "orange"
 
-    } else if (fechaActual > fecha && this.tareas.lista == "Finalizadas") {
+    } else if (fechaA > fecha && this.tareas.lista == "Finalizadas") {
       return "green"
 
-    } else if (fechaActual > fecha && this.tareas.lista != "Finalizadas") {
+    } else if (fechaA > fecha && this.tareas.lista != "Finalizadas") {
       return "red"
 
     } else {
