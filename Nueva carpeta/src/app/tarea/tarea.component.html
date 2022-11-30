@@ -6,7 +6,7 @@
     {{tareas.titulo}}
   </p>
   <div class="fecha_img" *ngIf="tareas.fechaFin != null">
-    <p [ngClass]="fechas">
+    <p [ngClass]="fechas(tareas.fechaFin)">
       {{tareas.fechaFin}}
     </p>
     <div *ngFor="let usuario of tareas.usuarios">

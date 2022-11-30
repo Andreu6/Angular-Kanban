@@ -33,19 +33,26 @@
   padding-bottom: 5px;
 }
 
-.naranja {
+.orange {
   background-color: orange;
+  border-radius: 100px;
+  padding: 6px;
 }
 
-.rojo {
+.red {
   background-color: red;
+  border-radius: 100px;
+  padding: 6px;
 }
 
-.verde {
+.green {
   background-color: green;
+  border-radius: 100px;
+  padding: 6px;
 }
 
-.gris {
+.grey {
   background-color: grey;
+  border-radius: 100px;
+  padding: 6px;
 }
-
