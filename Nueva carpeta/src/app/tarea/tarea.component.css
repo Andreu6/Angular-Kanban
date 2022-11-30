@@ -1,6 +1,7 @@
 .todo {
-  background-color: rgb(255, 231, 200);
+  background-color:  #FFFAD7;
   border-radius: 20px;
+  font-family: cursive;
 }
 
 .img {
@@ -40,13 +41,13 @@
 }
 
 .red {
-  background-color: red;
+  background-color: #FF9F9F;
   border-radius: 100px;
   padding: 6px;
 }
 
 .green {
-  background-color: green;
+  background-color: #B6E2A1;
   border-radius: 100px;
   padding: 6px;
 }
