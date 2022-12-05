@@ -12,6 +12,10 @@ const k_FINALIZADAS_LISTA: string = "Finalizadas";
 })
 export class AppComponent {
 
+  leerFormulario(json: string) {
+    console.log(JSON.stringify(json));
+  }
+
   listas: string[] = [];
   tareas: Tarea[];
 

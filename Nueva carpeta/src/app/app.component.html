@@ -6,3 +6,4 @@
     <app-tarea *ngIf="tarea.lista == lista" [tareas]="tareas[i]"></app-tarea>
   </div>
 </div>
+<app-formulario (guardarForm)="leerFormulario($event)"></app-formulario>
