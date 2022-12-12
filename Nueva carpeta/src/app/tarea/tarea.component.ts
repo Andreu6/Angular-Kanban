@@ -17,7 +17,7 @@ export class TareaComponent implements OnInit {
   @Input() tareas: Tarea;
 
   constructor() {
-    this.tareas = {};
+    this.tareas = {id:0, lista:"", img:"", titulo:"", usuarios:[{email:"", img:"", nick:"", alt:""}], fechaFin:new Date()};
   }
   ngOnInit(): void {}
 
