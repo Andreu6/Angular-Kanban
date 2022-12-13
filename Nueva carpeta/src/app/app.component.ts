@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
-import { Tarea } from './models/tarea-model';
+import {
+  Component
+} from '@angular/core';
+import {
+  Tarea
+} from './models/tarea-model';
 
 const k_PENDIENTES_LISTA: string = "Pendientes";
 const k_PROGRESO_LISTA: string = "Progreso";
@@ -54,9 +58,13 @@ export class AppComponent {
     this.listas.push(k_FINALIZADAS_LISTA);
   }
 
-mostrarformulario(mostar:boolean):void{
-if (this.mostrar == true) {this.mostrar = false } else {this.mostrar = true}
-}
+  mostrarformulario(mostrar: boolean): void {
+    if (this.mostrar == true) {
+      this.mostrar = false
+    } else {
+      this.mostrar = true
+    }
+  }
 
 
 }

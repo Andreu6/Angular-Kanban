@@ -7,19 +7,17 @@
       <app-tarea *ngIf="tarea.lista == lista" [tareas]="tareas[i]"></app-tarea>
     </div>
     <div class="todo">
-      <p  (click)="mostrarformulario(mostrar)">
-        + Añadir Tarea Nueva  
+      <p (click)="mostrarformulario(mostrar)">
+        + Añadir Tarea Nueva
       </p>
     </div>
   </div>
-  
+
 </div>
 
 <div *ngIf="mostrar == false">
-  <app-formulario (guardarForm)="leerFormulario($event)"></app-formulario> 
-  <button matTooltip="wooo, soy un tooltip"  (click)="mostrarformulario(mostrar)">
+  <app-formulario (guardarForm)="leerFormulario($event)"></app-formulario>
+  <button matTooltip="" (click)="mostrarformulario(mostrar)">
     Cancelar
   </button>
 </div>
-
-
