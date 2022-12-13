@@ -11,6 +11,16 @@
 
 }
 
+.todo {
+  background-color:  #FFFAD7;
+  border-radius: 20px;
+  margin-top: 15px;
+  text-align: center;
+  font-family: cursive;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 .lista {
   text-align: center;
   font-size: 25px;

@@ -1,12 +1,25 @@
-<div class="grid-container" *ngFor="let lista of listas">
-  <h3 class="lista">
-    {{ lista }}
-  </h3>
-  <div class="hijo" *ngFor="let tarea of tareas; index as i">
-    <app-tarea *ngIf="tarea.lista == lista" [tareas]="tareas[i]"></app-tarea>
+<div *ngIf="mostrar == true">
+  <div class="grid-container" *ngFor="let lista of listas">
+    <h3 class="lista">
+      {{ lista }}
+    </h3>
+    <div class="hijo" *ngFor="let tarea of tareas; index as i">
+      <app-tarea *ngIf="tarea.lista == lista" [tareas]="tareas[i]"></app-tarea>
+    </div>
+    <div class="todo">
+      <p  (click)="mostrarformulario(mostrar)">
+        + Añadir Tarea Nueva  
+      </p>
+    </div>
   </div>
+  
 </div>
-<app-formulario (guardarForm)="leerFormulario($event)"></app-formulario>
-<button matTooltip="wooo, soy un tooltip">
-  Pasa sobre mí para ver un tooltip
-</button>
+
+<div *ngIf="mostrar == false">
+  <app-formulario (guardarForm)="leerFormulario($event)"></app-formulario> 
+  <button matTooltip="wooo, soy un tooltip"  (click)="mostrarformulario(mostrar)">
+    Cancelar
+  </button>
+</div>
+
+

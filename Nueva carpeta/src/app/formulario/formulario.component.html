@@ -1,8 +1,9 @@
-<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
-
-    <label for="first-name">First Name: </label>
-    <input id="first-name" type="text" formControlName="taskName">
-  
+<!-- <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label for="titulo">Input</mat-label>
+      <input id="titulo" matInput formControlName="titulo" >
+    </mat-form-field>
+    <br>
     <mat-form-field appearance="fill">
       <mat-label>Date</mat-label>
       <input id="date" matInput [matDatepicker]="picker" formControlName="date">
@@ -10,9 +11,15 @@
       <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
-  
+  <br>
     <button type="submit" [disabled]="!taskForm.valid">Submit</button>
   </form>
   
-  <p>Complete the form to enable button.</p>
-  
+   -->
+
+
+    <mat-form-field appearance="fill">
+      <mat-label>Titulo</mat-label>
+      <input matInput placeholder="Ex.Titulo de la tarea" [formControl]="titulo" required>
+      <mat-error *ngIf="titulo.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>

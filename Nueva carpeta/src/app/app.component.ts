@@ -18,6 +18,7 @@ export class AppComponent {
 
   listas: string[] = [];
   tareas: Tarea[];
+  mostrar: boolean = false;
 
   constructor() {
     const tareasJSON: string = `{
@@ -52,4 +53,10 @@ export class AppComponent {
     this.listas.push(k_PROGRESO_LISTA);
     this.listas.push(k_FINALIZADAS_LISTA);
   }
+
+mostrarformulario(mostar:boolean):void{
+if (this.mostrar == true) {this.mostrar = false } else {this.mostrar = true}
+}
+
+
 }
