@@ -2,14 +2,14 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  height: 100%;
   overflow-y: hidden;
+  font-family: cursive;
 }
 
 .grid-container {
   display: grid;
-  margin: 10rem 50rem;
-  padding: 2rem;
+  margin: 10rem 45rem;
+  padding: 3rem;
   border-radius: 30px;
   background-color: #FCDDB0;
   box-shadow:
@@ -18,3 +18,23 @@
     1em 1em 1em rgba(0, 0, 0, 0.3);
 
 }
+
+.boton-mas {
+  display: flex;
+  justify-items: end;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+#color-save {
+  background-color: white;
+  border-radius: 30px;
+  font-size: 15px;
+}
+
+#color-cancel {
+  background-color: #FF9F9F;
+  border-radius: 30px;
+  font-size: 15px;
+}
+

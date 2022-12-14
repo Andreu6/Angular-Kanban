@@ -25,7 +25,10 @@
       <mat-label for="url">Url Imatge</mat-label>
       <input type="url" id="url" matInput formControlName="url">
     </mat-form-field>
+    <img class="boton-mas" src="../../assets/plus-solid.png" alt="boton de +">
     <br>
-    <button type="submit" [disabled]="!taskForm.valid">Submit</button>
+    <button id="color-save" type="submit" [disabled]="!taskForm.valid">Guardar</button>
+    <br>
+    <button id="color-cancel">Cancelar</button>
   </form>
 </body>

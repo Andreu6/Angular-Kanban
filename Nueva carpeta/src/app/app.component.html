@@ -1,4 +1,4 @@
-<div *ngIf="mostrar == true">
+<div *ngIf="mostrar == false">
   <div class="grid-container" *ngFor="let lista of listas">
     <h3 class="lista">
       {{ lista }}
@@ -15,7 +15,7 @@
 
 </div>
 
-<div *ngIf="mostrar == false">
+<div *ngIf="mostrar == true">
   <app-formulario (guardarForm)="leerFormulario($event)"></app-formulario>
   <button matTooltip="" (click)="mostrarformulario(mostrar)">
     Cancelar
