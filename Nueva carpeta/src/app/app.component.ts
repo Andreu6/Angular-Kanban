@@ -1,5 +1,6 @@
 import {
-  Component
+  Component,
+  Input
 } from '@angular/core';
 import {
   Tarea
@@ -14,15 +15,16 @@ const k_FINALIZADAS_LISTA: string = "Finalizadas";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+
 export class AppComponent {
 
-  leerFormulario(json: string) {
-    console.log(JSON.stringify(json));
-  }
+  @Input() mostrarForm = true;
+  @Input() recogerdatos: any;
+  @Input() tareas: Tarea[];
 
   listas: string[] = [];
-  tareas: Tarea[];
-  mostrar: boolean = false;
+  
 
   constructor() {
     const tareasJSON: string = `{
@@ -58,13 +60,42 @@ export class AppComponent {
     this.listas.push(k_FINALIZADAS_LISTA);
   }
 
-  mostrarformulario(mostrar: boolean): void {
-    if (this.mostrar == true) {
-      this.mostrar = false
-    } else {
-      this.mostrar = true
+  leerFormulario(json: string) {
+    let json2 = JSON.parse(json)
+    console.log(json2.fechaFin)
+
+    for (let i = 0; i < this.tareas.length; i++) {
+
+      if (json2.id == this.tareas[i].id) {
+
+        this.tareas[i] = json2;
+
+      }
+    }
+    if (json2.id == this.tareas.length) {
+
+      this.tareas.push(json2);
+      console.log(this.tareas)
     }
   }
 
+
+  mostrarform(mostrar2 ? : Tarea) {
+    this.recogerdatos = mostrar2;
+    this.mostrarForm = false;
+  }
+
+  esconderform(esconderForm: boolean) {
+
+    this.mostrarForm = esconderForm;
+
+  }
+
+  recogerDatos(datos: Tarea) {
+
+    this.recogerdatos = datos;
+    this.mostrarForm = false;
+
+  }
 
 }
