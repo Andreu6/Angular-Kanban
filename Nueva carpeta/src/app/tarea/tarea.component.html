@@ -7,7 +7,7 @@
   </p>
   <div class="fecha_img" *ngIf="tareas.fechaFin != null">
     <p [ngClass]="fechas(tareas.fechaFin)">
-      {{tareas.fechaFin}}
+      {{ DateString(tareas.fechaFin) }}
     </p>
     <div *ngFor="let usuario of tareas.usuarios">
       <div>
@@ -16,3 +16,4 @@
     </div>
   </div>
 </div>
+

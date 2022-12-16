@@ -11,6 +11,10 @@
 
 }
 
+.hijo {
+  padding-bottom: 5px;
+}
+
 .todo {
   background-color:  #FFFAD7;
   border-radius: 20px;
